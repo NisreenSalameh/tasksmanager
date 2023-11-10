@@ -73,3 +73,12 @@ td{
 .fa-pen-to-square:hover{
     color:rgb(118, 118, 237);
 }
+
+.fa-filter{
+    color: #84DCC6;
+}
+
+.fa-filter:hover{
+    color: #4ba08b;
+    cursor: pointer;
+}

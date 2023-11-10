@@ -65,7 +65,7 @@ function addTaskToTable() {
 
 function createTaskRow(taskName, dueDate, priority) {
     const taskRow = document.createElement("tr");
-    
+
     const statusCell = document.createElement("td");
     statusCell.textContent = "Active";
     statusCell.style.fontWeight = "bold";
