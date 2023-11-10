@@ -68,6 +68,7 @@ button{
     background: none;
     border: none;
     cursor: pointer;
+    margin: 0 10px 0 10px;
 }
 
 .btn.active-section {
