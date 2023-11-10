@@ -231,3 +231,26 @@ function sortTasksByPriority() {
         taskList.appendChild(row);
     });
 }
+
+
+const sortButtonByDate = document.getElementById("sortTasksByDate");
+sortButtonByDate.addEventListener("click", () => {
+    sortTasksByDate();
+});
+
+function sortTasksByDate() {
+    const sortedRows = Array.from(tableRows).slice(1).sort((rowA, rowB) => {
+        const dueDateA = new Date(rowA.querySelector("td:nth-child(4)").textContent);
+        const dueDateB = new Date(rowB.querySelector("td:nth-child(4)").textContent);
+
+        return dueDateA - dueDateB;
+    });
+
+    for (let i = 1; i < tableRows.length; i++) {
+        tableRows[i].remove();
+    }
+    
+    sortedRows.forEach(row => {
+        taskList.appendChild(row);
+    });
+}
