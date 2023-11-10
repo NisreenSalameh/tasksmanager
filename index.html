@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <script src="https://kit.fontawesome.com/749b88acba.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="title">
+            <h2>Task Manager</h2>
+        </div>
+
+        <p class="alert d-none">All inputs must be filled</p>
+
+        <div class="inputs">
+            <input type="text" id="taskName" class="task-name-input" placeholder="Write a task">
+            <input type="date" id="taskDueDate" class="task-due-date">
+            <select id="priority" class="priority-input">
+                <option value="" disabled selected>Priority</option>
+                <option value="High Priority">High Priority</option>
+                <option value="Low Priority">Low Priority</option>
+            </select>
+            <button class="btn add-tasks-btn" id="addTask">Add</button>
+        </div>
+
+        <div class="none-inputs d-none">
+            <div class="filter">
+                <div class="status-filter">
+                    <button class="btn" id="allTasks">All Tasks</button>
+                    <button class="btn" id="activeTasks">Active Tasks</button>
+                    <button class="btn" id="completedTasks">Completed Tasks</button>
+                </div>
+                <div class="sorting-filter">
+                    <i class="fa-solid fa-filter"></i>
+                </div>
+            </div>
+            <div class="tasks-list">
+                <table class="tasks" id="tasksListing" >
+                    <tr>
+                        <th class="column">Status</th>
+                        <th class="column">Tasks</th>
+                        <th class="column">Priority</th>
+                        <th class="column">Due Date</th>
+                        <th class="column">Actions</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <button class="btn clear-btn d-none">Clear All</button>
+
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+.filter{
+    margin: 30px 0 10px 0;
+    display: flex;
+    gap: 40px;
+    padding: 4px;
+}
+
+.status-filter{
+    display: flex;
+    text-align: left;
+    gap:2px;
+    margin-right: 410px;
+}
+
+.sorting-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tasks-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+th{
+    padding: 10px;
+    width: 150px;
+    background-color: #4B4E6D;
+    color:aliceblue;
+}
+
+td{
+    padding: 10px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.task-name-input{
+    width:460px;
+}
+
+.add-tasks-btn{
+    width: 70px;
+}
+
+.task-name-input,
+.task-due-date,
+.priority-input,
+.add-tasks-btn{
+    height: 25px;
+}
+
+.fa-trash{
+    color: rgb(239, 188, 188);
+}
+.fa-trash:hover{
+    color: rgb(241, 97, 97);
+}
+
+.fa-check{
+    color:rgb(127, 170, 127);
+}
+.fa-check:hover{
+    color:rgb(17, 116, 17);
+}
+
+.fa-pen-to-square{
+    color:rgb(182, 182, 241);
+}
+.fa-pen-to-square:hover{
+    color:rgb(118, 118, 237);
+}
