@@ -150,3 +150,46 @@ function clearAllTasks() {
     noneInputsContainer.style.display = "none";
     clearAllButton.classList.add("d-none");
 }
+
+
+
+allTasksButton.addEventListener("click", () => {
+    showAllTasks();
+    setActiveSectionButton(allTasksButton);
+    clearAllButton.classList.remove("d-none");
+});
+function showAllTasks() {
+    for (let i = 1; i < tableRows.length; i++) {
+        tableRows[i].removeAttribute("hidden");
+    }
+}
+
+activeTasksButton.addEventListener("click", () => {
+    showActiveTasks();
+    setActiveSectionButton(activeTasksButton);
+    clearAllButton.classList.add("d-none");
+});
+function showActiveTasks() {
+    for (let i = 1; i < tableRows.length; i++) {
+        if (tableRows[i].querySelector("td").textContent === "Active") {
+            tableRows[i].removeAttribute("hidden");
+        } else {
+            tableRows[i].setAttribute("hidden", "true");
+        }
+    }
+}
+
+completedTasksButton.addEventListener("click", () => {
+    showCompletedTasks();
+    setActiveSectionButton(completedTasksButton);
+    clearAllButton.classList.add("d-none");
+});
+function showCompletedTasks() {
+    for (let i = 1; i < tableRows.length; i++) {
+        if (tableRows[i].querySelector("td").textContent === "Completed") {
+            tableRows[i].removeAttribute("hidden");
+        } else {
+            tableRows[i].setAttribute("hidden", "true");
+        }
+    }
+}
