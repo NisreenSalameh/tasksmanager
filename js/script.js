@@ -201,3 +201,33 @@ function setActiveSectionButton(activeButton) {
 
     activeButton.classList.add("active-section");
 }
+
+
+
+const sortButton = document.getElementById("sortTasks");
+sortButton.addEventListener("click", () => {
+    sortTasksByPriority();
+});
+
+function sortTasksByPriority() {
+    const sortedRows = Array.from(tableRows).slice(1).sort((rowA, rowB) => {
+        const priorityA = rowA.querySelector("td:nth-child(3)").textContent;
+        const priorityB = rowB.querySelector("td:nth-child(3)").textContent;
+
+        if (priorityA === "High Priority" && priorityB === "Low Priority") {
+            return -1;
+        } else if (priorityA === "Low Priority" && priorityB === "High Priority") {
+            return 1;
+        } else {
+            return 0;
+        }
+    });
+
+    for (let i = 1; i < tableRows.length; i++) {
+        tableRows[i].remove();
+    }
+
+    sortedRows.forEach(row => {
+        taskList.appendChild(row);
+    });
+}
