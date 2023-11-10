@@ -152,7 +152,7 @@ function clearAllTasks() {
 
 
 
-
+// Filtering tasks status 
 allTasksButton.addEventListener("click", () => {
     showAllTasks();
     setActiveSectionButton(allTasksButton);
@@ -203,7 +203,7 @@ function setActiveSectionButton(activeButton) {
 }
 
 
-
+//Sorting the task's priorities
 const sortButton = document.getElementById("sortTasks");
 sortButton.addEventListener("click", () => {
     sortTasksByPriority();
@@ -232,7 +232,7 @@ function sortTasksByPriority() {
     });
 }
 
-
+//Sorting the task's due dates
 const sortButtonByDate = document.getElementById("sortTasksByDate");
 sortButtonByDate.addEventListener("click", () => {
     sortTasksByDate();
