@@ -153,6 +153,7 @@ function clearAllTasks() {
 
 
 
+
 allTasksButton.addEventListener("click", () => {
     showAllTasks();
     setActiveSectionButton(allTasksButton);
@@ -192,4 +193,12 @@ function showCompletedTasks() {
             tableRows[i].setAttribute("hidden", "true");
         }
     }
+}
+
+function setActiveSectionButton(activeButton) {
+    allTasksButton.classList.remove("active-section");
+    activeTasksButton.classList.remove("active-section");
+    completedTasksButton.classList.remove("active-section");
+
+    activeButton.classList.add("active-section");
 }
