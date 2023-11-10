@@ -64,7 +64,7 @@ function addTaskToTable() {
 
 
 function createTaskRow(taskName, dueDate, priority) {
-    taskRow = document.createElement("tr");
+    const taskRow = document.createElement("tr");
     
     const statusCell = document.createElement("td");
     statusCell.textContent = "Active";
@@ -117,13 +117,12 @@ function createTaskRow(taskName, dueDate, priority) {
     deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
     deleteButton.addEventListener("click", () => {
         taskRow.remove();
-        
         const remainingTasks = taskList.getElementsByTagName("tr").length - 1;
 
-        if (remainingTasks === 0) {
-            noneInputsContainer.style.display = "none";
-            clearAllButton.classList.add("d-none");
-        }
+            if (remainingTasks === 0) {
+                noneInputsContainer.style.display = "none";
+                clearAllButton.classList.add("d-none");
+            }
     });
     
     const actionsCell = document.createElement("td");
